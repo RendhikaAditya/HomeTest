@@ -5,56 +5,42 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import com.rendhika.hometest.R
+import com.rendhika.hometest.adapter.ReksadanaAdapter
+import com.rendhika.hometest.databinding.FragmentImbalHasilBinding
+import com.rendhika.hometest.model.ModelReksaDana
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ImbalHasilFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ImbalHasilFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentImbalHasilBinding
+    private var reksaDana : ArrayList<ModelReksaDana> = arrayListOf()
+    var sizeData: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_imbal_hasil, container, false)
+        binding = FragmentImbalHasilBinding.inflate(layoutInflater)
+
+        getData()
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ImbalHasilFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ImbalHasilFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun getData() {
+        reksaDana.add(ModelReksaDana(R.drawable.ic_bniam, "BNI-AM Inspiring Equity Fund", "Saham", "5,50% / 5 thn", "3,64 Miliar", "1 Juta", "5 Tahun", "Tinggi", "16 Apr 2014"))
+        reksaDana.add(ModelReksaDana(R.drawable.ic_cipta, "Cipta Dana Cash", "Pasar Uang", "6,29% / thn", "215,97 Miliar", "100 Ribu", "1 Tahun", "Rendah", "14 Jan 2016"))
+        reksaDana.add(ModelReksaDana(R.drawable.ic_ascend, "Ascend Reksa Dana Saham Eq...", "Saham", "7,17% / 5 thn", "3,89 Triliun", "100 Ribu", "5 Tahun", "Tinggi", "20 Feb 2007"))
+
+        sizeData = reksaDana.size
+
+        binding.rvReksa.setHasFixedSize(true)
+        binding.rvReksa.layoutManager = GridLayoutManager(context, sizeData)
+
+        val adapter = ReksadanaAdapter(reksaDana)
+        binding.rvReksa.adapter = adapter
+        adapter.notifyDataSetChanged()
+
     }
+
 }

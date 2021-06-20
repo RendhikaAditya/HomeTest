@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginRight="@dimen/_6sdp"
+    android:layout_marginLeft="@dimen/_6sdp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_122sdp"
+            android:background="@drawable/shape"
+            android:id="@+id/card_1"
+            android:backgroundTint="@color/first"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:id="@+id/icon"
+                android:src="@drawable/ic_bniam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat"
+                android:id="@+id/nama"
+                android:text="BNI-AM Inspiring Equity Fund"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis reksa dana"
+            android:id="@+id/titleJenis"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:id="@+id/card_2"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:backgroundTint="@color/first"
+            android:background="@drawable/shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/jenisReksadana"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="Saham"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imbal Hasil"
+            android:id="@+id/titleImbal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:backgroundTint="@color/first"
+            android:id="@+id/card_3"
+            android:background="@drawable/shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/imbalHasil"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="4.40% / thn"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dana Kelolaan"
+            android:id="@+id/titleKelolaan"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/card_4"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:backgroundTint="@color/first"
+            android:background="@drawable/shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/danaKelolaan"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="4.4 Miliar"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min. Pembelian"
+            android:id="@+id/titleMin"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:id="@+id/card_5"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:backgroundTint="@color/first"
+            android:background="@drawable/shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/minPembelian"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="1 Juta"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jangka waktu"
+            android:id="@+id/titleWaktu"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/card_6"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:backgroundTint="@color/first"
+            android:background="@drawable/shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/jangkaWaktu"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="5 Tahun"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tingkat Resiko"
+            android:id="@+id/titleResiko"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/card_7"
+            android:backgroundTint="@color/first"
+            android:background="@drawable/shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/tingkatResiko"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="Tinggi"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peluncuran"
+            android:id="@+id/titlePeluncuran"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/card_8"
+            android:backgroundTint="@color/first"
+            android:background="@drawable/shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/peluncuran"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="19 jun 2020"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:id="@+id/btnDetail"
+            android:background="@drawable/shape_stroke">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:text="Detail"
+                android:layout_centerInParent="true"
+                android:textColor="@color/primary"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:backgroundTint="@color/primary"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:id="@+id/btnBeli"
+            android:background="@drawable/shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:text="Beli"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
