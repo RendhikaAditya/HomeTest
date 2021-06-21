@@ -7,31 +7,22 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.github.mikephil.charting.utils.ColorTemplate
+import com.rendhika.hometest.R
 import com.rendhika.hometest.databinding.ReksadanaRowBinding
 import com.rendhika.hometest.model.ModelReksaDana
 
 class ReksadanaAdapter(private var listMenu: ArrayList<ModelReksaDana>) :
     RecyclerView.Adapter<ReksadanaAdapter.GridViewHolder>() {
 
-    class GridViewHolder(val binding: ReksadanaRowBinding): RecyclerView.ViewHolder(binding.root) {
-        fun bind(model :ModelReksaDana){
-            binding.icon.setImageDrawable(ContextCompat.getDrawable(binding.root.context, model.icon))
-            binding.nama.text = model.nama
-            binding.jenisReksadana.text = model.jenis
-            binding.imbalHasil.text = model.imbal_hasil
-            binding.danaKelolaan.text = model.dana_kelolaan
-            binding.minPembelian.text = model.min_pembelian
-            binding.jangkaWaktu.text = model.jangka_waktu
-            binding.tingkatResiko.text = model.tingkat_resiko
-            binding.peluncuran.text = model.peluncuran
-        }
-
+    class GridViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+        val binding = ReksadanaRowBinding.bind(itemView)
     }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GridViewHolder {
-        val binding = ReksadanaRowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return GridViewHolder(binding)
+        val view: View = LayoutInflater.from(parent.context)
+            .inflate(R.layout.reksadana_row, parent, false)
+        return GridViewHolder(view)
     }
 
     override fun getItemCount(): Int {
@@ -39,11 +30,17 @@ class ReksadanaAdapter(private var listMenu: ArrayList<ModelReksaDana>) :
     }
 
     override fun onBindViewHolder(holder: GridViewHolder, position: Int) {
-//        if(position%2==0){
-//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//                holder.binding.card1.
-//            }
-//        }
+        val model = listMenu[position]
+
+        holder.binding.icon.setImageDrawable(ContextCompat.getDrawable(holder.binding.root.context, model.icon))
+            holder.binding.nama.text = model.nama
+            holder.binding.jenisReksadana.text = model.jenis
+            holder.binding.imbalHasil.text = model.imbal_hasil
+            holder.binding.danaKelolaan.text = model.dana_kelolaan
+            holder.binding.minPembelian.text = model.min_pembelian
+            holder.binding.jangkaWaktu.text = model.jangka_waktu
+            holder.binding.tingkatResiko.text = model.tingkat_resiko
+            holder.binding.peluncuran.text = model.peluncuran
         if (position == 0) {
             holder.binding.titleJenis.visibility = View.VISIBLE
             holder.binding.titleImbal.visibility = View.VISIBLE

@@ -32,6 +32,7 @@ class ImbalHasilFragment : Fragment() {
         reksaDana.add(ModelReksaDana(R.drawable.ic_cipta, "Cipta Dana Cash", "Pasar Uang", "6,29% / thn", "215,97 Miliar", "100 Ribu", "1 Tahun", "Rendah", "14 Jan 2016"))
         reksaDana.add(ModelReksaDana(R.drawable.ic_ascend, "Ascend Reksa Dana Saham Eq...", "Saham", "7,17% / 5 thn", "3,89 Triliun", "100 Ribu", "5 Tahun", "Tinggi", "20 Feb 2007"))
 
+
         sizeData = reksaDana.size
 
         binding.rvReksa.setHasFixedSize(true)
